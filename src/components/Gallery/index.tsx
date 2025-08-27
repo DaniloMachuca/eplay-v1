@@ -23,7 +23,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',
-    url: ''
+    url: undefined
   })
 
   const getMediaCover = (item: GalleryItem) => {
@@ -39,7 +39,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
     setModal({
       isVisible: false,
       type: 'image',
-      url: ''
+      url: undefined
     })
   }
 
