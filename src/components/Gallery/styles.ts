@@ -4,6 +4,8 @@ import { colors } from '../../styles'
 export const Items = styled.ul`
   display: flex;
   gap: 16px;
+
+  flex-wrap: wrap;
 `
 
 export const Action = styled.div`
@@ -68,7 +70,6 @@ export const Modal = styled.div`
 export const ModalContent = styled.div`
   position: relative;
   z-index: 1;
-  max-width: 960px;
   header {
     display: flex;
     margin-bottom: 24px;

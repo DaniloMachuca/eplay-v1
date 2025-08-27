@@ -7,6 +7,7 @@ export type Props = {
   title: string
   background: 'gray' | 'black'
   games: Game[]
+  id?: string
 }
 
 export const formataPreco = (prices = 0) => {
@@ -16,7 +17,7 @@ export const formataPreco = (prices = 0) => {
   }).format(prices)
 }
 
-const ProductsList = ({ background, title, games }: Props) => {
+const ProductsList = ({ background, title, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
     if (game.release_date) {
@@ -35,7 +36,7 @@ const ProductsList = ({ background, title, games }: Props) => {
   }
 
   return (
-    <Section title={title} background={background}>
+    <Section id={id} title={title} background={background}>
       <S.List>
         {games.map((game) => {
           return (
